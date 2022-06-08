@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    {% if clicked == True %}
+
+        <p>{{ message }}</p>
+
+    {% else %}
+
+        <form action="/quote" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </form>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+{% if table != [] %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>{{ funds }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+        {% for i in table %}
+
+
+                <tr>
+                    <td>{{ i['symbol'] }}</td>
+                    <td>{{ i["name"] }}</td>
+                    <td>{{ i["number"] }}</td>
+                    <td>{{ i["price"] }}</td>
+                    <td>{{ i["total"] }}</td>
+                </tr>
+
+
+        {% endfor %}
+
+
+            <tr>
+                <td colspan="4">CASH</td>
+                <td>{{ cash[0]["cash"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endif %}
+
+{% endblock %}
