@@ -13,9 +13,9 @@ Download DB file from distribution code:
 Place ``finance.db`` into your project directory.
 
 In a terminal in your project directory, set environmental variable for flask app:
-``export FLASK_APP=application``
+``$ export FLASK_APP=application``
 
-An API KEy from IEX is required. Set it via: ``export API_KEY=<YOURKEY>``
+An API KEy from IEX is required (see linked description above). Set it via: ``$ export API_KEY=<YOURKEY>``
 
 
 
